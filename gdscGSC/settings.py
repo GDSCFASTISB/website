@@ -93,7 +93,6 @@ DATABASES = {
     'PASSWORD': '3IXpo1lwdEJi',
     'HOST': 'ep-white-sea-a5tz28yz.us-east-2.aws.neon.tech',
     'PORT': '5432',
-    'OPTIONS': {'sslmode': 'require'},
   }
 }
 
