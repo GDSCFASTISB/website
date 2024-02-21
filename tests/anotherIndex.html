@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Locomotive Scroll Experiment</title>
+        <link rel="stylesheet" href="locomotive-scroll.css">
+        <style>
+    /* Basic styling for demonstration */
+    body, html { margin: 0; padding: 0; }
+    section { height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+    .is-animated {
+        animation: customAnimation 1s forwards;
+      }
+      
+      @keyframes customAnimation {
+        0% {
+          transform: scale(1);
+          color: black;
+        }
+        100% {
+          transform: scale(1.5);
+          color: red;
+        }
+      }
+    .bg1 { background: #ffadad; }
+    .bg2 { background: #ffd6a5; }
+    .bg3 { background: #fdffb6; }
+    .bg4 { background: #caffbf; }
+    .bg5 { background: #9bf6ff; }
+    .card { padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  </style>
+    </head>
+    <body>
+
+        <div data-scroll-container>
+
+            <section class="bg1" data-scroll-section>
+                <h2 data-scroll data-scroll-speed="20">Welcome to the
+                    Experiment</h2>
+            </section>
+
+            <section class="bg2" data-scroll-section>
+                <div class="card" data-scroll data-scroll-speed="2"
+                    data-scroll-delay="0.5">
+                    <p>Scroll-triggered animation card.</p>
+                </div>
+            </section>
+
+            <section class="bg3" data-scroll-section>
+                <div data-scroll data-scroll-speed="20"
+                    data-scroll-direction="horizontal">
+                    <h2>Horizontal scrolling effect</h2>
+                </div>
+            </section>
+
+            <section class="bg4" data-scroll-section>
+                <div class="card" data-scroll data-scroll-speed="1"
+                    data-scroll-position="left">
+                    <p>Reverse speed scroll effect.</p>
+                </div>
+            </section>
+
+            <section class="bg5" data-scroll-section>
+                <div data-scroll data-scroll-call="custom-animation"
+                    data-scroll-repeat="true">
+                    <h2>Call custom animation on scroll</h2>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="locomotive-scroll.min.js"></script>
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true
+        });
+    
+        // Listen for the 'call' event
+        scroll.on('call', (func, direction, obj) => {
+          // Check if the 'custom-animation' function is called
+          if (func === 'custom-animation') {
+            const element = obj.el; // The element that triggered the call
+    
+            // Toggle custom animation class or style
+            element.classList.toggle('is-animated'); // Add a class that defines your animation
+    
+            // Alternatively, apply styles directly for a simple effect (for example, changing color and size)
+            if (element.style.color === 'red') {
+              element.style.color = '';
+              element.style.fontSize = '';
+            } else {
+              element.style.color = 'red';
+              element.style.fontSize = '2em';
+            }
+          }
+        });
+      });
+</script>
+
+    </body>
+</html>

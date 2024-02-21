@@ -1,0 +1,2069 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Outfit:wght@200;400&family=Urbanist&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Outfit:wght@200;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist&display=swap" rel="stylesheet">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+ :root {
+	 --primary-color: #fff;
+	 --secondary-color: #010e39;
+}
+ *, *:after {
+	 box-sizing: border-box;
+}
+ body {
+    font-family: "Urbanist", sans-serif;
+	 background-color: #202124;
+}
+
+.ytnow{
+    transform: translate(5%, -100%);
+}
+
+.illustration-editor {
+	 margin-top: -2rem;
+	 margin-right: -10rem;
+	 display: grid;
+	 grid-template-rows: 24px auto;
+	 justify-items: center;
+	 position: relative;
+}
+ .code {
+	 position: absolute;
+	 width: 290px;
+	 height: 145px;
+	 background: #1d1e22;
+	 box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+	 border-radius: 6px;
+	 z-index: 5;
+}
+ .code header {
+	 display: grid;
+	 grid-template-columns: 36px auto 36px;
+	 align-items: center;
+}
+ .code header svg {
+	 margin: 10px;
+}
+ .code header h1 {
+	 font-family: Lato, sans-serif;
+	 font-weight: 900;
+	 font-size: 14px;
+	 letter-spacing: 1.57px;
+	 color: #c5c8d4;
+	 margin: 0;
+}
+ .code-html {
+	 left: -120px;
+	 top: 40px;
+}
+ .code-css {
+	 left: -45px;
+	 top: 200px;
+}
+ .code-js {
+	 left: -195px;
+	 top: 360px;
+}
+ .code .code-content {
+	 margin: 0 10px 10px;
+	 color: white;
+}
+ .code .code-content .c-r {
+	 color: #a88038;
+}
+ .code .code-content .c-o {
+	 color: #de7300;
+}
+ .code .code-content .c-y {
+	 color: #e1ca72;
+}
+ .code .code-content .c-g {
+	 color: #74b087;
+}
+ .code .code-content .c-p {
+	 color: #9f8198;
+}
+ .code .code-content .c-b {
+	 color: #7a99ad;
+}
+ .code .code-content .c-c {
+	 color: #666;
+}
+ .code-css .code-content code .line-1 {
+	 width: 0%;
+	 margin: 0;
+	 border-right: 0.15em solid transparent;
+	 overflow: hidden;
+	 display: inline-block;
+	 white-space: nowrap;
+}
+ .code-css .code-content code .line-2 {
+	 width: 0%;
+	 margin: 0;
+	 border-right: 0.15em solid transparent;
+	 overflow: hidden;
+	 display: inline-block;
+	 white-space: nowrap;
+}
+ .code-css .code-content code .line-3 {
+	 width: 0%;
+	 margin: 0;
+	 border-right: 0.15em solid transparent;
+	 overflow: hidden;
+	 display: inline-block;
+	 white-space: nowrap;
+}
+ .code-css .code-content code .line-4 {
+	 width: 0%;
+	 margin: 0;
+	 border-right: 0.15em solid transparent;
+	 overflow: hidden;
+	 display: inline-block;
+	 white-space: nowrap;
+}
+ .code-css .code-content code .line-5 {
+	 width: 0%;
+	 margin: 0;
+	 border-right: 0.15em solid transparent;
+	 overflow: hidden;
+	 display: inline-block;
+	 white-space: nowrap;
+}
+ .code-css .code-content code .line-1 {
+	 animation: typing-1 3s 0s steps(30, end) forwards, cursor 1s linear 0s 3;
+}
+ .code-css .code-content code .line-2 {
+	 animation: typing-2 3s 3s steps(30, end) forwards, cursor 1s linear 3s 3;
+}
+ .code-css .code-content code .line-3 {
+	 animation: typing-3 3s 6s steps(30, end) forwards, cursor 1s linear 6s 3;
+}
+ .code-css .code-content code .line-4 {
+	 animation: typing-4 3s 9s steps(30, end) forwards, cursor 1s linear 9s 3;
+}
+ .code-css .code-content code .line-1, .code-css .code-content code .line-3, .code-css .code-content code .line-4 {
+	 animation-duration: 1s;
+	 animation-timing-function: steps(10, end);
+}
+ .code-css .code-content code .line-5 {
+	 border-color: transparent;
+	 animation: typing-5 3s 12s steps(30, end) forwards, cursor-persist 1s linear 12s infinite;
+}
+ .code-css .code-content code .line-2 {
+	 margin-left: 2rem;
+}
+ .code-css .code-content code .line-3, .code-css .code-content code .line-4, .code-css .code-content code .line-5 {
+	 margin-left: 4rem;
+}
+ .editor-block {
+	 position: relative;
+	 display: block;
+	 width: 500px;
+	 height: 421px;
+	 background: linear-gradient(109.61deg, #4c4f5a 4.26%, #202125 84.84%);
+	 border-radius: 10px;
+}
+ @keyframes typing-1 {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 60px;
+	}
+}
+ @keyframes typing-2 {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 220px;
+	}
+}
+ @keyframes typing-3 {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 70px;
+	}
+}
+ @keyframes typing-4 {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 75px;
+	}
+}
+ @keyframes typing-5 {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 141px;
+	}
+}
+ @keyframes cursor {
+	 from, to, 20%, 80% {
+		 border-color: transparent;
+	}
+	 25%, 75% {
+		 border-color: white;
+	}
+}
+ @keyframes cursor-persist {
+	 from, 45% {
+		 border-color: transparent;
+	}
+	 50%, to {
+		 border-color: white;
+	}
+}
+ .container {
+	 position: sticky;
+	 left: 0;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+     z-index: 100;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .tabs {
+	 display: flex;
+     margin-top: 10px;
+	 position: relative;
+	 background-color: #fff;
+	 box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+	 padding: 0.65rem;
+	 border-radius: 99px;
+     z-index: 2;
+}
+ .tabs * {
+	 z-index: 2;
+}
+ input[type="radio"] {
+	 display: none;
+}
+ .tab {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 34px;
+    width:90px;
+	 font-size: 0.85rem;
+	 font-weight: 800;
+	 border-radius: 99px;
+	 cursor: pointer;
+	 transition: color 0.15s ease-in;
+}
+ .notification {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 2rem;
+	 height: 2rem;
+	 margin-left: 0.75rem;
+	 border-radius: 50%;
+	 background-color: var(--secondary-color);
+	 transition: 0.15s ease-in;
+}
+ input[type="radio"]:checked + label {
+	 color: var(--primary-color);
+}
+ input[type="radio"]:checked + label > .notification {
+	 background-color: var(--primary-color);
+	 color: #fff;
+}
+ input[id="radio-1"]:checked ~ .glider {
+	 transform: translateX(0);
+}
+ input[id="radio-2"]:checked ~ .glider {
+	 transform: translateX(100%);
+}
+ input[id="radio-3"]:checked ~ .glider {
+	 transform: translateX(200%);
+}
+input[id="radio-4"]:checked ~ .glider {
+	 transform: translateX(300%);
+}
+ .glider {
+	 position: absolute;
+	 display: flex;
+	 height: 34px;
+	 width: 90px;
+	 background-color: var(--secondary-color);
+	 z-index: 1;
+	 border-radius: 99px;
+	 transition: 0.25s ease-out;
+}
+ @media (max-width: 700px) {
+	 .tabs {
+		 transform: scale(0.6);
+	}
+}
+.testing{
+    justify-content: center;
+    text-align: center;
+    width:50%;
+    margin: auto;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    transition: 0.3s;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+}
+
+.testing:hover{
+    box-shadow: rgba(240, 46, 170, 0.4) 10px 10px, rgba(240, 46, 170, 0.3) 20px 20px, rgba(240, 46, 170, 0.2) 30px 30px, rgba(240, 46, 170, 0.1) 40px 40px, rgba(240, 46, 170, 0.05) 50px 50px;
+}
+
+.cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  color: #0c4271;
+
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .1s;
+  z-index: 1000;
+}
+
+.cursor.grow{
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #0a81ab;
+    opacity: .5;
+}
+.cursor2.grow{
+    opacity: 0;
+}
+
+.cursor2{
+  position: fixed;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .15s;
+  z-index: 1000;
+}
+
+h1{
+    transition: 0.3s;
+}
+
+
+
+.mainvideo{
+
+    margin-top: 20px;
+    width: 98%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    overflow: hidden;
+    background-color: #010e39;
+
+    
+}
+.tabs.more img{
+    width:60px;
+    transform: translate(0, 0%);
+}
+.tabs.more {
+    padding:0;
+    margin-right: 10px;
+}
+.video-container{
+    justify-content: center;
+    align-items: center;
+    height: 860px;
+    margin-bottom: 0px;
+    position: relative;
+    
+
+    
+}
+
+html.has-scroll-smooth {
+  overflow: hidden; }
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.has-scroll-smooth body {
+  overflow: hidden; }
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh; }
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap; }
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%; }
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0; }
+  .c-scrollbar:hover {
+    transform: scaleX(1.45); }
+  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+    opacity: 1; }
+  [data-scroll-direction="horizontal"] .c-scrollbar {
+    width: 100%;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    transform: scaleY(1); }
+    [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+      transform: scaleY(1.3); }
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab; }
+  .has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing; }
+  [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+    right: auto;
+    bottom: 0; }
+
+.maintext{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* border: 2px solid white; */
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+    transition: 0.3s;
+  
+
+}
+.maintext .title1{
+    font-size: 180px;
+
+    font-family: 'Outfit', sans-serif;
+    font-weight: 1000;
+    text-align: left;
+
+}
+
+.maintext .toptext{
+    font-size: 25px;
+    font-family: 'Outfit', sans-serif;
+    text-align: left;
+    margin-bottom: -150px;
+    margin-top: 100px;
+}
+.creatorp{
+
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -120px;
+}
+
+.creators{
+    /* position: absolute;
+    bottom: 22%;
+    left: 10%;
+    height: 30px; */
+
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border: 2px solid white; */
+    color: white;
+    height: 25px;
+    border-radius: 10px;
+    z-index: 30;
+    transition: 0.3s;
+    background-color: #272729;
+
+
+}
+.creators p{
+    transform: translate(0, -70%);
+}
+.creators:hover{
+    background-color: #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.ytvid{
+    margin-top: 70px;
+    transform: translate(-15%, -5%);
+}
+
+.center { text-align: center; }
+
+.container2 {
+  width: 95%;
+  max-width: 1220px;
+  margin: 0 auto;
+  margin-top: 100px;
+  color:white;
+}
+
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+}
+
+.episode__number {
+    position: sticky;
+  font-size: 10vw;
+  font-weight: 600;
+  padding: 10px 0;
+  
+  top: 0;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+.episode__content {
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+.episode__content .title {
+  font-weight: 600
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:1000px) {
+    .testing{
+        width: 90%;
+        font-size: 60px;
+    }
+    .title1{
+        margin-bottom: -20px;
+    }
+
+
+}
+
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animated-title {
+  color: white;
+
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid white;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: #767676;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+.overflow-hidden {
+ overflow: hidden;
+}
+
+.drop-in {
+ animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-in-2 {
+ animation: drop-in 1200ms ease 500ms backwards;
+}
+
+@keyframes drop-in {
+ from {
+  opacity: 0;
+  transform: translateY(-100px);
+ }
+ to {
+  opacity: 1;
+  transform: translate(0px);
+ }
+}
+
+.second-part{
+  height:600px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width:80%;
+  margin: auto;
+  color: white;
+}
+.second-part h1{
+  font-size: 70px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 70px;
+  margin-top: -40px;;
+}
+.second-part h1 span{
+  color: #838fd3;
+}
+.second-part p{
+  font-size: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  color: #7f8292;
+}
+
+.third-part{
+  height:600px;
+  text-align: center;
+  align-items: center;
+  width:60%;
+  margin: auto;
+  color: white;
+}
+.third-part h1{
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 70px;
+  margin-top: -40px;;
+}
+.third-part h1 span{
+  color: #838fd3;
+}
+.third-part p{
+  font-size: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-top: 60px;
+  color: #7f8292;
+}
+
+.fourth-part{
+  height:600px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width:80%;
+  margin: auto;
+  color: white;
+}
+.fourth-part h1{
+  font-size: 70px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  margin-top: -40px;;
+}
+.fourth-part h1 span{
+  color: #838fd3;
+}
+.fourth-part p{
+  font-size: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  color: #7f8292;
+}
+
+
+.fifth-part{
+  height:200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width:80%;
+  margin: auto;
+  color: white;
+}
+.fifth-part h1{
+  font-size: 70px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  margin-top: -40px;;
+
+}
+.fifth-part h1 span{
+  color: #838fd3;
+}
+.fifth-part p{
+  font-size: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-top: -200px;
+  color: #7f8292;
+}
+
+
+
+</style>
+<script>
+  function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('drop-in');
+              observer.unobserve(entry.target);
+          }
+      });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+  // Replace 'id1' and 'id2' with the actual IDs of your elements
+  const element1 = document.getElementById('id1');
+  const element2 = document.getElementById('id2');
+
+  if (element1) {
+      observer.observe(element1);
+  }
+
+  if (element2) {
+      observer.observe(element2);
+  }
+</script>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="tabs more">
+            
+            <img src="{% static 'logovocalaid.png' %}" />
+        </div>
+        <div class="tabs">
+            <input type="radio" id="radio-1" name="tabs" checked />
+            <label class="tab" for="radio-1">Home</label>
+            <input type="radio" id="radio-2" name="tabs" />
+            <label class="tab" for="radio-2">About</label>
+            <input type="radio" id="radio-3" name="tabs" />
+            <label class="tab" for="radio-3">Process</label>
+            <input type="radio" id="radio-4" name="tabs" />
+            <label class="tab" for="radio-4">Frameworks</label>
+            <span class="glider"></span>
+        </div>
+
+    </div>
+
+    <div data-scroll-container>
+        
+
+    <div class="video-container">
+        <div class="mainvideo">
+
+
+            <video autoplay muted loop preload="none"
+                src="https://framerusercontent.com/assets/FLBxqz4iuJBqu6uz8D8Ju2Tuzno.mp4"
+                style="width: 100%; height:100%; filter: blur(2px) brightness(80%) hue-rotate(-40deg); object-fit: cover;">
+            </video>
+        </div>
+        <div class="maintext">
+
+            <p class="toptext">Helping hearing empaired individuals to pronounce.</p>
+
+                <!-- <div class="text-top">
+                  <div>
+                    <span>hey, harry !</span>
+                    <span>yes yes you...</span>
+                  </div>
+                </div> -->
+
+                  <div><h1 class="title1 header drop-in">VocalAid</h1></div>
+
+
+            
+            <div class="creatorp">            
+                <div class="creators">
+                <p>Check out the Creators and how it was made</p>
+                </div>
+                <!-- <div class="creators">
+                    <p>Check out the Creators and how it was made</p>
+                    </div> -->
+                    <div class="ytvid">
+                        <div class="illustration-editor">
+                            <div class="code-blocks">
+                              <div class="code code-html">
+                                <header>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+                          <h1>HTML</h1>
+                                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+                                </header>
+                                <div class="code-content">
+                                  <code>
+                                    <span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"rect"</span><span class="c-r">&gt;&lt;/div&gt;</span></div>
+                                  </code>
+                                </div>
+                              </div>
+                              <div class="code code-css">
+                                <header>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+                          <h1>CSS</h1>
+                                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+                                </header>
+                                <div class="code-content">
+                                  <code>
+                                    <p class="line-1"><span class="c-y">.rect</span> <span>{</span></p><br/><p class="line-2"><span class="c-p">background</span><span>:</span> <span class="c-y">linear-gradient</span>( </p><br/><p class="line-3"><span class="c-o">-119deg</span>,</p><br/><p class="line-4"><span class="c-y">$gray</span> <span class="c-o">0%</span>,</p><br/><p class="line-5"><span class="c-y">$dark-gray</span> <span class="c-o">100%</span>);}</p>
+                                  </code>
+                                </div>
+                              </div>
+                              <div class="code code-js">
+                                <header>
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+                          <h1>JS</h1>
+                                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+                                </header>
+                                <div class="code-content">
+                                  <code>
+                                    <span class="c-y">var</span> <span class="c-b">colors</span> = [<span class="c-g">“#74B087”</span>, <span class="c-g">“#DE7300”</span>, <span class="c-g">“#74B087”</span>];<br/><br/>
+                                    <span class="c-c">// Do the thing</span><br/>
+                                    <span class="c-y">function</span> <span class="c-b">animate</span>() {}
+                                  </code>
+                              </div>
+                            </div>
+                            <div class="editor-block"></div>
+                          </div>
+                    <iframe class="ytnow" width="660" height="380" src="https://www.youtube.com/embed/Y2lWEVyO-qE?si=0TPA7hXS799BOPfB&amp;start=4;autoplay=1" style="border-radius: 20px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+            </div>
+             </div>
+    </div>
+    <div class="second-part">
+      <p>ABOUT</p>
+      <h1>At <span>VocalAid</span> our innovation
+        is the heartbeat of our team</h1>
+
+        <div class="grid">
+  
+          <div class="card">
+            <span class="icon">
+              <svg
+                viewBox="0 0 23 23"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+              <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 3H11V7H17V13H21V21H13V17H7V11H3V3ZM15 9H9V15H15V9Z"
+              fill="currentColor"
+            />
+              </svg>
+            </span>
+            <h4>Products</h4>
+            <p>
+              Standard chunk of Lorem Ipsum used since the 1500s is showed below
+              for those interested.
+            </p>
+            <div class="shine"></div>
+            <div class="background">
+              <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+        
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+        
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+              </div>
+        
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+              <path
+              d="M4.99255 11.0159C4.44027 11.0159 3.99255 10.5682 3.99255 10.0159C3.99255 9.6585 4.18004 9.3449 4.46202 9.16807L7.14964 6.48045C7.54016 6.08993 8.17333 6.08993 8.56385 6.48045C8.95438 6.87098 8.95438 7.50414 8.56385 7.89467L7.44263 9.0159L14.9926 9.01589C15.5448 9.01589 15.9926 9.46361 15.9926 10.0159C15.9926 10.5682 15.5448 11.0159 14.9926 11.0159L5.042 11.0159C5.03288 11.016 5.02376 11.016 5.01464 11.0159H4.99255Z"
+              fill="currentColor"
+            />
+            <path
+              d="M19.0074 12.9841C19.5597 12.9841 20.0074 13.4318 20.0074 13.9841C20.0074 14.3415 19.82 14.6551 19.538 14.8319L16.8504 17.5195C16.4598 17.9101 15.8267 17.9101 15.4361 17.5195C15.0456 17.129 15.0456 16.4958 15.4361 16.1053L16.5574 14.9841H9.00745C8.45516 14.9841 8.00745 14.5364 8.00745 13.9841C8.00745 13.4318 8.45516 12.9841 9.00745 12.9841L18.958 12.9841C18.9671 12.984 18.9762 12.984 18.9854 12.9841H19.0074Z"
+              fill="currentColor"
+            />
+              </svg>
+            </span>
+            <h4>Products</h4>
+            <p>
+              Standard chunk of Lorem Ipsum used since the 1500s is showed below
+              for those interested.
+            </p>
+            <div class="shine"></div>
+            <div class="background">
+              <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+        
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+        
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+              </div>
+        
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+              <path d="M6 6H10V4H4V10H6V6Z" fill="currentColor" />
+              <path d="M10 18H6V14H4V20H10V18Z" fill="currentColor" />
+              <path d="M14 6H18V10H20V4H14V6Z" fill="currentColor" />
+              <path d="M14 18H18V14H20V20H14V18Z" fill="currentColor" />
+              <path
+                d="M12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5Z"
+                fill="currentColor"
+              />
+              </svg>
+            </span>
+            <h4>Products</h4>
+            <p>
+              Standard chunk of Lorem Ipsum used since the 1500s is showed below
+              for those interested.
+            </p>
+            <div class="shine"></div>
+            <div class="background">
+              <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+        
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+        
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+              </div>
+        
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 9.5V5.5C4.5 4.94772 4.94772 4.5 5.5 4.5H9.5C10.0523 4.5 10.5 4.94772 10.5 5.5V9.5C10.5 10.0523 10.0523 10.5 9.5 10.5H5.5C4.94772 10.5 4.5 10.0523 4.5 9.5Z"
+                />
+                <path
+                  d="M13.5 18.5V14.5C13.5 13.9477 13.9477 13.5 14.5 13.5H18.5C19.0523 13.5 19.5 13.9477 19.5 14.5V18.5C19.5 19.0523 19.0523 19.5 18.5 19.5H14.5C13.9477 19.5 13.5 19.0523 13.5 18.5Z"
+                />
+                <path d="M4.5 19.5L7.5 13.5L10.5 19.5H4.5Z" />
+                <path
+                  d="M16.5 4.5C18.1569 4.5 19.5 5.84315 19.5 7.5C19.5 9.15685 18.1569 10.5 16.5 10.5C14.8431 10.5 13.5 9.15685 13.5 7.5C13.5 5.84315 14.8431 4.5 16.5 4.5Z"
+                />
+              </svg>
+            </span>
+            <h4>Categories</h4>
+            <p>
+              Standard chunk of Lorem Ipsum used since the 1500s is showed below
+              for those interested.
+            </p>
+            <div class="shine"></div>
+            <div class="background">
+              <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+        
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+        
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+              </div>
+        
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class="scrollcont">
+        <div class="fourth-part">
+          <p>FRAMEWORKS</p>
+          <h1>The <span>Tech Stack</span> that helped us create our inspiration</h1>
+        </div>
+        <div class="slidermain">
+          <img class="scrollcard" src="{% static 'logovocalaid.png' %}"/>
+          <img class="scrollcard" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/2560px-Django_logo.svg.png"/>
+          <img class="scrollcard" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png"/>
+          <img class="scrollcard" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.png"/>
+          <img class="scrollcard" src="https://download.logo.wine/logo/Python_(programming_language)/Python_(programming_language)-Logo.wine.png"/>
+          <img class="scrollcard" src="https://www.quintagroup.com/blog/blog-images/machine-learning-libraries/tensorflow.png/@@images/image.png"/>
+          <img class="scrollcard" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pytorch_logo_icon_169823.png"/>
+        </div>
+      </div>
+
+      <div class="cards2">
+        <article class="information [ card2 ]">
+          <span class="tag">Github</span>
+          <h2 class="title3">VocalAid Hearing Services</h2>
+          <p class="info">Flutter, Python, TensorFlow, HTML. Helping hearing empaired individuals to pronounce.          </p>
+          <button class="button">
+            <span>Go to Code</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+            </svg>
+          </button>
+        </article>
+        <div class="third-part">
+          <p>SOURCE</p>
+          <h1>Check Out Our <span>Github</span> for the source of our imagination</h1>
+        </div>
+
+      </div>
+      <div class="fifth-part">
+        <p>TEAM</p>
+        <h1>The <span>People</span> without which
+          none of this would be possible</h1>
+
+
+      </div>
+
+      <div class="teamsp">
+        <article class="profile">
+          <div class="profile-image">
+            <img src="{% static 'salman.jpg' %}" />
+          </div>
+          <h2 class="profile-username">Salman Ahmed</h2>
+          <small class="profile-user-handle">@elena_zoldado</small>
+        
+          <div class="profile-links">
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </article>
+        <article class="profile">
+          <div class="profile-image">
+            <img src="{% static 'zaraar.jpg' %}" />
+          </div>
+          <h2 class="profile-username">Zarar Malik</h2>
+          <small class="profile-user-handle">@elena_zoldado</small>
+        
+          <div class="profile-links">
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </article>
+        <article class="profile">
+          <div class="profile-image">
+            <img src="{% static 'abdullah.jpg' %}" />
+          </div>
+          <h2 class="profile-username">Abdullah Zubair</h2>
+          <small class="profile-user-handle">@elena_zoldado</small>
+        
+          <div class="profile-links">
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </article>
+        <article class="profile">
+          <div class="profile-image">
+            <img src="{% static 'riyan.jpg' %}" /> 
+          </div>
+          <h2 class="profile-username">Muhammad Riyan</h2>
+          <small class="profile-user-handle">@elena_zoldado</small>
+        
+          <div class="profile-links">
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="#" class="link link--icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+
+
+      <div class="second-part">
+        <p>ABOUT</p>
+        <h1>At <span>VocalAid</span> our innovation
+          is the heartbeat of our team</h1>
+          </div>  
+
+    </div>  
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+</body>
+<script src="https://kit.fontawesome.com/ebe565a456.js" crossorigin="anonymous"></script>
+<style>
+  .teamsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: space-between; */
+    margin-top: 60px;
+    margin-bottom: 200px;
+    gap: 20px;
+    line-height: 1.5;
+	  min-height: 400px;
+    flex-wrap: wrap;
+  }
+</style>
+
+
+<script src="{% static 'locomotive-scroll.min.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    });
+</script>
+
+<script>
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    var test = document.querySelector(".container");
+    document.addEventListener("mousemove",function(e){
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    });
+
+    test.addEventListener("mouseenter",function(){
+        cursor.classList.add("grow");
+        cursor2.classList.add("grow");
+    });
+
+    test.addEventListener("mouseleave", function () {
+    cursor.classList.remove("grow");
+    cursor2.classList.remove("grow");
+});
+  </script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<style>
+
+
+.profile {
+	 display: flex;
+	 align-items: center;
+	 flex-direction: column;
+	 padding: 3rem;
+	 width: 90%;
+	 max-width: 300px;
+	 background-color: #1b2028;
+	 border-radius: 16px;
+	 position: relative;
+	 border: 3px solid transparent;
+	 background-clip: padding-box;
+	 text-align: center;
+	 color: #f1f3f3;
+   transition:0.3s;
+	 background-image: linear-gradient(135deg, rgba(46, 80, 124, 0.35), rgba(74, 89, 115, 0.1) 15%, #1b2028 20%, #1b2028 100%);
+}
+.profile:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+}
+
+ .profile:after {
+	 content: "";
+	 display: block;
+	 top: -3px;
+	 left: -3px;
+	 bottom: -3px;
+	 right: -3px;
+	 z-index: -1;
+	 position: absolute;
+	 border-radius: 16px;
+   transition:0.3s;
+	 background-image: linear-gradient(135deg, #2e417c, #4a5773 20%, #1b2028 30%, #2c333e 100%);
+}
+ .profile-image {
+	 border-radius: 50%;
+	 overflow: hidden;
+	 width: 175px;
+	 height: 175px;
+	 position: relative;
+}
+ .profile-image img {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+   
+	 transform: translate(-50%, -47%);
+	 width: 100%;
+}
+ .profile-username {
+	 font-size: 1.5rem;
+	 font-weight: 600;
+	 margin-top: 1.5rem;
+}
+ .profile-user-handle {
+	 color: #7d8396;
+}
+ .profile-actions {
+	 margin-top: 1.5rem;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .profile-actions > * {
+	 margin: 0 0.25rem;
+}
+ .btn {
+	 border: 0;
+	 background-color: transparent;
+	 padding: 0;
+	 height: 46px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 line-height: 1;
+	 transition: 0.15s ease;
+}
+ .btn--primary {
+	 border-radius: 99em;
+	 background-color: #3772ff;
+	 background-image: linear-gradient(135deg, #5587ff, #3772ff);
+	 color: #fff;
+	 padding: 0 1.375em;
+}
+ .btn--primary:hover, .btn--primary:focus {
+	 background-size: 150%;
+}
+ .btn--icon {
+	 height: 46px;
+	 width: 46px;
+	 border-radius: 50%;
+	 border: 3px solid #343945;
+	 color: #7d8396;
+}
+ .btn--icon i {
+	 font-size: 1.25em;
+}
+ .btn--icon:hover, .btn--icon:focus {
+	 border-color: #7d8396;
+}
+ .profile-links {
+	 margin-top: 3.5rem;
+}
+ .link {
+	 text-decoration: none;
+	 color: #7d8396;
+	 margin-left: 0.375rem;
+	 margin-right: 0.375rem;
+}
+ .link i {
+	 font-size: 1.25em;
+}
+ 
+
+
+    @keyframes autoSlide {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-225%);
+        }
+
+        50% {
+            transform: translateX(-450%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+    }
+.scrollcard{
+  animation: autoSlide 15s infinite;
+        transition: 0.5s;
+        
+        width: 200px;
+        margin-left: 30px;
+        margin-right: 30px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        /* mix-blend-mode: color-burn; */
+        filter: brightness(0) invert(1);
+        
+}
+
+.scrollcont{
+  margin-top: 20px;
+    width: 98%;
+    height: 600px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    overflow: hidden;
+    background: rgb(51,51,80);
+background: linear-gradient(0deg, rgba(51,51,80,1) 15%, rgba(32,33,36,1) 100%);
+  
+}
+
+.slidermain{
+  display: flex;
+        margin-top: -350px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+        mask-image: linear-gradient(to right, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%);
+        
+}
+.slidermain::-webkit-scrollbar {
+        display: none;
+    }
+
+:root {
+	 --c-white: #fff;
+	 --c-black: #000;
+	 --c-ash: #eaeef6;
+	 --c-charcoal: #a0a0a0;
+	 --c-void: #141b22;
+	 --c-fair-pink: #ffedec;
+	 --c-apricot: #fbc8be;
+	 --c-coffee: #754d42;
+	 --c-del-rio: #917072;
+	 --c-java: #223b3b;
+	 --c-titan-white: #c9c9c9;
+	 --c-cold-purple: #a69fd6;
+	 --c-indigo: #1a1924;
+	 --c-governor: #272633;
+}
+
+ .cards2 {
+	 display: flex;
+	 flex-wrap: wrap;
+	 align-items: flex-start;
+	 flex-wrap: wrap;
+	 justify-content: center;
+	 gap: 2.5rem;
+	 width: 90%;
+	 max-width: 1000px;
+	 margin: 10vh auto;
+}
+ .card2 {
+  margin-top: 30px;
+	 border-radius: 16px;
+	 box-shadow: 0 30px 30px -25px rgba(65, 51, 183, .25);
+	 max-width: 300px;
+   transition:0.3s;
+   
+}
+.card2:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.1);
+}
+ .information {
+	 background-color: var(--c-white);
+	 padding: 1.5rem;
+}
+ .information .tag {
+	 display: inline-block;
+	 background-color: var(--c-titan-white);
+	 color: var(--c-indigo);
+	 font-weight: 600;
+	 font-size: 0.875rem;
+	 padding: 0.5em 0.75em;
+	 line-height: 1;
+	 border-radius: 6px;
+}
+ .information .tag + * {
+	 margin-top: 1rem;
+}
+ .information .title3 {
+	 font-size: 1.5rem;
+	 color: var(--c-void);
+	 line-height: 1.25;
+}
+ .information .title3 + * {
+	 margin-top: 1rem;
+}
+ .information .info {
+	 color: var(--c-charcoal);
+}
+ .information .info + * {
+	 margin-top: 1.25rem;
+}
+ .information .button {
+	 font: inherit;
+	 line-height: 1;
+	 background-color: var(--c-white);
+	 border: 2px solid var(--c-indigo);
+	 color: var(--c-indigo);
+	 padding: 0.5em 1em;
+	 border-radius: 6px;
+	 font-weight: 500;
+	 display: inline-flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 gap: 0.5rem;
+   transition:0.3s;
+}
+ .information .button:hover, .information .button:focus {
+	 background-color: var(--c-indigo);
+	 color: var(--c-white);
+}
+ .information .details {
+	 display: flex;
+	 gap: 1rem;
+}
+ .information .details div {
+	 padding: 0.75em 1em;
+	 background-color: var(--c-titan-white);
+	 border-radius: 8px;
+	 display: flex;
+	 flex-direction: column-reverse;
+	 gap: 0.125em;
+	 flex-basis: 50%;
+}
+ .information .details dt {
+	 font-size: 0.875rem;
+	 color: var(--c-cold-purple);
+}
+ .information .details dd {
+	 color: var(--c-indigo);
+	 font-weight: 600;
+	 font-size: 1.25rem;
+}
+ 
+
+
+
+  * {
+	 --background-color: #18181b;
+	 --text-color: #a1a1aa;
+	 --card-background-color: rgba(255, 255, 255, .015);
+	 --card-border-color: rgba(255, 255, 255, 0.1);
+	 --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+	 --card-box-shadow-1-y: 3px;
+	 --card-box-shadow-1-blur: 6px;
+	 --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+	 --card-box-shadow-2-y: 8px;
+	 --card-box-shadow-2-blur: 15px;
+	 --card-label-color: #fff;
+	 --card-icon-color: #d4d4d8;
+	 --card-icon-background-color: rgba(255, 255, 255, 0.08);
+	 --card-icon-border-color: rgba(255, 255, 255, 0.12);
+	 --card-shine-opacity: 0.1;
+	 --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #ae97ff 25deg, rgba(52, 211, 153, 0.18) 295deg, rgba(16, 185, 129, 0) 360deg);
+	 --card-line-color: #2a2b2c;
+	 --card-tile-color: rgba(16, 75, 185, 0.05);
+	 --card-hover-border-color: rgba(255, 255, 255, 0.2);
+	 --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+	 --card-hover-box-shadow-1-y: 5px;
+	 --card-hover-box-shadow-1-blur: 10px;
+	 --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+	 --card-hover-box-shadow-2-y: 15px;
+	 --card-hover-box-shadow-2-blur: 25px;
+	 --card-hover-icon-color: #4a53cc;
+	 --card-hover-icon-background-color: rgba(255, 255, 255, 0.1);
+	 --card-hover-icon-border-color: rgba(33, 4, 112, 0.2);
+	 --blur-opacity: 0.01;
+}
+ body.light {
+	 --background-color: #fafafa;
+	 --text-color: #52525b;
+	 --card-background-color: transparent;
+	 --card-border-color: rgba(24, 24, 27, 0.08);
+	 --card-box-shadow-1: rgba(24, 24, 27, 0.02);
+	 --card-box-shadow-1-y: 3px;
+	 --card-box-shadow-1-blur: 6px;
+	 --card-box-shadow-2: rgba(24, 24, 27, 0.04);
+	 --card-box-shadow-2-y: 2px;
+	 --card-box-shadow-2-blur: 7px;
+	 --card-label-color: #18181b;
+	 --card-icon-color: #18181b;
+	 --card-icon-background-color: rgba(24, 24, 27, 0.04);
+	 --card-icon-border-color: rgba(24, 24, 27, 0.1);
+	 --card-shine-opacity: 0.3;
+	 --card-shine-gradient: conic-gradient(from 225deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10b981 25deg, #edfaf6 285deg, #fff 345deg, rgba(16, 185, 129, 0) 360deg);
+	 --card-line-color: #e9e9e7;
+	 --card-tile-color: rgba(16, 185, 129, 0.08);
+	 --card-hover-border-color: rgba(24, 24, 27, 0.15);
+	 --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
+	 --card-hover-box-shadow-1-y: 3px;
+	 --card-hover-box-shadow-1-blur: 6px;
+	 --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
+	 --card-hover-box-shadow-2-y: 8px;
+	 --card-hover-box-shadow-2-blur: 15px;
+	 --card-hover-icon-color: #18181b;
+	 --card-hover-icon-background-color: rgba(24, 24, 27, 0.04);
+	 --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
+	 --blur-opacity: 0.1;
+}
+ body.toggle .grid * {
+	 transition-duration: 0s !important;
+}
+ .grid {
+	 display: grid;
+   width:90%;
+   margin: auto;
+   align-items: center;
+  
+	 grid-template-columns: repeat(4,25%);
+	 grid-gap: 30px;
+	 /* position: relative; */
+	 z-index: 1;
+   place-items: center;
+   transform: translate(-50px, 0);
+}
+
+
+ .card {
+	 background-color: var(--background-color);
+	 box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1), 0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2), 0 0 0 1px var(--card-border-color);
+	 padding: 56px 16px 16px 16px;
+	 border-radius: 15px;
+	 cursor: pointer;
+	 position: relative;
+   height:270px;
+   width:220px;
+   /* margin-right: 30px; */
+
+   transform: scale(1.2);
+	 transition: box-shadow 0.25s;
+}
+ .card::before {
+	 content: '';
+	 position: absolute;
+	 inset: 0;
+	 border-radius: 15px;
+	 background-color: var(--card-background-color);
+}
+ .card .icon {
+	 z-index: 2;
+	 position: relative;
+	 display: table;
+
+	 padding: 8px;
+}
+ .card .icon::after {
+	 content: '';
+	 position: absolute;
+	 inset: 4.5px;
+	 border-radius: 50%;
+	 background-color: var(--card-icon-background-color);
+	 border: 1px solid var(--card-icon-border-color);
+	 backdrop-filter: blur(2px);
+	 transition: background-color 0.25s, border-color 0.25s;
+}
+ .card .icon svg {
+	 position: relative;
+	 z-index: 1;
+	 display: block;
+	 width: 24px;
+	 height: 24px;
+	 transform: translateZ(0);
+	 color: var(--card-icon-color);
+	 transition: color 0.25s;
+}
+ .card h4 {
+	 z-index: 2;
+	 position: relative;
+	 margin: 12px 0 4px 0;
+	 font-family: inherit;
+	 font-weight: 600;
+
+	 font-size: 14px;
+	 line-height: 2;
+	 color: var(--card-label-color);
+}
+ .card p {
+	 z-index: 2;
+	 position: relative;
+	 margin: 0;
+	 font-size: 14px;
+	 line-height: 1.7;
+	 color: var(--text-color);
+}
+ .card .shine {
+	 border-radius: inherit;
+	 position: absolute;
+	 inset: 0;
+	 z-index: 1;
+	 overflow: hidden;
+	 opacity: 0;
+	 transition: opacity 0.5s;
+}
+ .card .shine:before {
+	 content: '';
+	 width: 150%;
+	 padding-bottom: 150%;
+	 border-radius: 50%;
+	 position: absolute;
+	 left: 50%;
+	 bottom: 55%;
+	 filter: blur(35px);
+	 opacity: var(--card-shine-opacity);
+	 transform: translateX(-50%);
+	 background-image: var(--card-shine-gradient);
+}
+ .card .background {
+	 border-radius: inherit;
+	 position: absolute;
+	 inset: 0;
+	 overflow: hidden;
+	 -webkit-mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+	 mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+}
+ .card .background .tiles {
+	 opacity: 0;
+	 transition: opacity 0.25s;
+}
+ .card .background .tiles .tile {
+	 position: absolute;
+	 background-color: var(--card-tile-color);
+	 animation-duration: 8s;
+	 animation-iteration-count: infinite;
+	 opacity: 0;
+}
+ .card .background .tiles .tile.tile-4, .card .background .tiles .tile.tile-6, .card .background .tiles .tile.tile-10 {
+	 animation-delay: -2s;
+}
+ .card .background .tiles .tile.tile-3, .card .background .tiles .tile.tile-5, .card .background .tiles .tile.tile-8 {
+	 animation-delay: -4s;
+}
+ .card .background .tiles .tile.tile-2, .card .background .tiles .tile.tile-9 {
+	 animation-delay: -6s;
+}
+ .card .background .tiles .tile.tile-1 {
+	 top: 0;
+	 left: 0;
+	 height: 10%;
+	 width: 22.5%;
+}
+ .card .background .tiles .tile.tile-2 {
+	 top: 0;
+	 left: 22.5%;
+	 height: 10%;
+	 width: 27.5%;
+}
+ .card .background .tiles .tile.tile-3 {
+	 top: 0;
+	 left: 50%;
+	 height: 10%;
+	 width: 27.5%;
+}
+ .card .background .tiles .tile.tile-4 {
+	 top: 0;
+	 left: 77.5%;
+	 height: 10%;
+	 width: 22.5%;
+}
+ .card .background .tiles .tile.tile-5 {
+	 top: 10%;
+	 left: 0;
+	 height: 22.5%;
+	 width: 22.5%;
+}
+ .card .background .tiles .tile.tile-6 {
+	 top: 10%;
+	 left: 22.5%;
+	 height: 22.5%;
+	 width: 27.5%;
+}
+ .card .background .tiles .tile.tile-7 {
+	 top: 10%;
+	 left: 50%;
+	 height: 22.5%;
+	 width: 27.5%;
+}
+ .card .background .tiles .tile.tile-8 {
+	 top: 10%;
+	 left: 77.5%;
+	 height: 22.5%;
+	 width: 22.5%;
+}
+ .card .background .tiles .tile.tile-9 {
+	 top: 32.5%;
+	 left: 50%;
+	 height: 22.5%;
+	 width: 27.5%;
+}
+ .card .background .tiles .tile.tile-10 {
+	 top: 32.5%;
+	 left: 77.5%;
+	 height: 22.5%;
+	 width: 22.5%;
+}
+ @keyframes tile {
+	 0%, 12.5%, 100% {
+		 opacity: 1;
+	}
+	 25%, 82.5% {
+		 opacity: 0;
+	}
+}
+ .card .background .line {
+	 position: absolute;
+	 inset: 0;
+	 opacity: 0;
+	 transition: opacity 0.35s;
+}
+ .card .background .line:before, .card .background .line:after {
+	 content: '';
+	 position: absolute;
+	 background-color: var(--card-line-color);
+	 transition: transform 0.35s;
+}
+ .card .background .line:before {
+	 left: 0;
+	 right: 0;
+	 height: 1px;
+	 transform-origin: 0 50%;
+	 transform: scaleX(0);
+}
+ .card .background .line:after {
+	 top: 0;
+	 bottom: 0;
+	 width: 1px;
+	 transform-origin: 50% 0;
+	 transform: scaleY(0);
+}
+ .card .background .line.line-1:before {
+	 top: 10%;
+}
+ .card .background .line.line-1:after {
+	 left: 22.5%;
+}
+ .card .background .line.line-1:before, .card .background .line.line-1:after {
+	 transition-delay: 0.3s;
+}
+ .card .background .line.line-2:before {
+	 top: 32.5%;
+}
+ .card .background .line.line-2:after {
+	 left: 50%;
+}
+ .card .background .line.line-2:before, .card .background .line.line-2:after {
+	 transition-delay: 0.15s;
+}
+ .card .background .line.line-3:before {
+	 top: 55%;
+}
+ .card .background .line.line-3:after {
+	 right: 22.5%;
+}
+ .card:hover {
+	 box-shadow: 0px 3px 6px var(--card-hover-box-shadow-1), 0px var(--card-hover-box-shadow-2-y) var(--card-hover-box-shadow-2-blur) var(--card-hover-box-shadow-2), 0 0 0 1px var(--card-hover-border-color);
+}
+ .card:hover .icon::after {
+	 background-color: var(--card-hover-icon-background-color);
+	 border-color: var(--card-hover-icon-border-color);
+}
+ .card:hover .icon svg {
+	 color: var(--card-hover-icon-color);
+}
+ .card:hover .shine {
+	 opacity: 1;
+	 transition-duration: 0.5s;
+	 transition-delay: 0s;
+}
+ .card:hover .background .tiles {
+	 opacity: 1;
+	 transition-delay: 0.25s;
+}
+ .card:hover .background .tiles .tile {
+	 animation-name: tile;
+}
+ .card:hover .background .line {
+	 opacity: 1;
+	 transition-duration: 0.15s;
+}
+ .card:hover .background .line:before {
+	 transform: scaleX(1);
+}
+ .card:hover .background .line:after {
+	 transform: scaleY(1);
+}
+ .card:hover .background .line.line-1:before, .card:hover .background .line.line-1:after {
+	 transition-delay: 0s;
+}
+ .card:hover .background .line.line-2:before, .card:hover .background .line.line-2:after {
+	 transition-delay: 0.15s;
+}
+ .card:hover .background .line.line-3:before, .card:hover .background .line.line-3:after {
+	 transition-delay: 0.3s;
+}
+ .day-night {
+	 cursor: pointer;
+	 position: absolute;
+	 right: 20px;
+	 top: 20px;
+	 opacity: 0.3;
+}
+ .day-night input {
+	 display: none;
+}
+ .day-night input + div {
+	 border-radius: 50%;
+	 width: 20px;
+	 height: 20px;
+	 position: relative;
+	 box-shadow: inset 8px -8px 0 0 var(--text-color);
+	 transform: scale(1) rotate(-2deg);
+	 transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+}
+ .day-night input + div:before {
+	 content: '';
+	 width: inherit;
+	 height: inherit;
+	 border-radius: inherit;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 transition: background-color 0.3s ease;
+}
+ .day-night input + div:after {
+	 content: '';
+	 width: 6px;
+	 height: 6px;
+	 border-radius: 50%;
+	 margin: -3px 0 0 -3px;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 box-shadow: 0 -23px 0 var(--text-color), 0 23px 0 var(--text-color), 23px 0 0 var(--text-color), -23px 0 0 var(--text-color), 15px 15px 0 var(--text-color), -15px 15px 0 var(--text-color), 15px -15px 0 var(--text-color), -15px -15px 0 var(--text-color);
+	 transform: scale(0);
+	 transition: all 0.3s ease;
+}
+ .day-night input:checked + div {
+	 box-shadow: inset 20px -20px 0 0 var(--text-color);
+	 transform: scale(0.5) rotate(0deg);
+	 transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
+}
+ .day-night input:checked + div:before {
+	 background: var(--text-color);
+	 transition: background-color 0.3s ease 0.1s;
+}
+ .day-night input:checked + div:after {
+	 transform: scale(1);
+	 transition: transform 0.5s ease 0.15s;
+}
+ html {
+	 box-sizing: border-box;
+	 -webkit-font-smoothing: antialiased;
+}
+
+
+ body:before {
+	 content: '';
+	 position: absolute;
+	 inset: 0 -60% 65% -60%;
+	 background-image: radial-gradient(ellipse at top, #10b981 0%, var(--background-color) 50%);
+	 opacity: var(--blur-opacity);
+}
+ body .twitter {
+	 position: fixed;
+	 display: block;
+	 right: 12px;
+	 bottom: 12px;
+}
+ body .twitter svg {
+	 width: 32px;
+	 height: 32px;
+	 fill: #fff;
+}
+ 
+</style>
+</html>
