@@ -23,5 +23,6 @@
         "src": "/(.*)",
         "dest": "gdscGSC/wsgi.py"
       }
-    ]
+    ],
+    "outputDirectory": "staticfiles"
   }
